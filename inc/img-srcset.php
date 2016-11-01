@@ -1,8 +1,8 @@
-<?php if(SRCSET): ?>
+<?php if(SRCSET !== "false"): ?>
 
   <img
   src="http://placehold.it/1200x800"
-  sizes="100vw"
+  sizes="(max-width:423px) 70vw"
   srcset="
   http://placehold.it/320x140 330w,
   http://placehold.it/400x200 400w,
@@ -12,7 +12,6 @@
 
 <?php else: ?>
 
-  <?php $randNum = rand(1,5);?>
   <img src="http://placehold.it/1200x800" alt="spaceship" class="img-responsive img-center" >
 
 <?php endif; ?>
