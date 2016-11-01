@@ -1,0 +1,129 @@
+
+/* GLOBAL */
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+p,li{
+  font-family: sans-serif;
+  color: rgba(33, 32, 32, 0.61);
+  line-height: 24px;
+}
+
+li{
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+h2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Header */
+
+.banner-full-screen {
+  background-image: url("http://lorempicsum.com/futurama/1200/800/4");
+  position: relative;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  padding-top: 33vh;
+}
+
+@media only screen and (max-width: 768px){
+  .banner-full-screen {
+    background-image: url("http://lorempicsum.com/futurama/768/400/4");
+  }
+}
+
+@media only screen and (max-width: 450px){
+  .banner-full-screen {
+    background-image: url("http://lorempicsum.com/futurama/450/400/4");
+  }
+}
+
+@media only screen and (max-width: 450px){
+  .banner-full-screen {
+    background-image: url("http://lorempicsum.com/futurama/450/400/4");
+  }
+}
+
+@media only screen and (max-width: 380px){
+  .banner-full-screen {
+    background-image: url("http://lorempicsum.com/futurama/450/400/4");
+  }
+}
+
+
+.banner-full-screen h1 {
+  font-size: 95px;
+  font-family: serif;
+  color: #FFF;
+  text-align: center;
+}
+
+.banner-full-screen .btn{
+  margin-top: 30px;
+}
+
+
+
+.subtitle{
+  letter-spacing: 4px;
+  color: #FFF;
+  margin: 0px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Header */
+
+/* BTN  */
+
+.btn{
+  width: 90%;
+  font-family: sans-serif;
+  max-width: 200px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #FFF;
+  text-decoration: none;
+  background-color: transparent;;
+  text-align: center;
+  display: block;
+  margin: auto;
+  height: 50px;
+  border: 2px solid #FFF;
+}
+
+/* Body */
+.container{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.container img { display: inline-block; margin: auto;}
+
+.img-responsive{
+  max-width: 100%;
+  width: auto;
+}
+
+.img-center{
+  display: block;
+  margin: auto;
+}
+
+.opti-state{
+  margin-bottom: 30px;
+}
+
+.success{ color: rgba(12, 113, 12, 0.89);}
+.error{ color: red;}
