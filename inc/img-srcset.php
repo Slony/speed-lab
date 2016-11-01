@@ -1,18 +1,18 @@
 <?php if(SRCSET): ?>
 
-  <?php $randNum = rand(1,5);?>
   <img
-  src="http://lorempicsum.com/futurama/1200/800/<?= $randNum;?>"
-  alt="spaceship" class="img-responsive img-center"
+  src="http://placehold.it/1200x800"
+  sizes="100vw"
   srcset="
-  http://lorempicsum.com/futurama/300/200/<?= $randNum;?> 400w,
-  http://lorempicsum.com/futurama/600/400/<?= $randNum;?> 768w,
-  http://lorempicsum.com/futurama/1224/800/<?= $randNum;?> 1024w
-  " >
+  http://placehold.it/320x140 330w,
+  http://placehold.it/400x200 400w,
+  http://placehold.it/640x300 640w,
+  http://placehold.it/1000x400  1000w"
+  alt="" class="img-responsive" />
 
 <?php else: ?>
 
   <?php $randNum = rand(1,5);?>
-  <img src="http://lorempicsum.com/futurama/1200/800/<?= $randNum;?>" alt="spaceship" class="img-responsive img-center" >
+  <img src="http://placehold.it/1200x800" alt="spaceship" class="img-responsive img-center" >
 
 <?php endif; ?>
