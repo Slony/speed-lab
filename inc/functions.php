@@ -32,6 +32,12 @@ if(isset($_GET['srcset'])){
   define("SRCSET","false");
 }
 
+// SPRITE
+if(isset($_GET['sprite'])){
+  ( $_GET['sprite'] !== "") ? define('SPRITE','true') : "" ;
+}else{
+  define('SPRITE','false');
+}
 
 // URL
 $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";

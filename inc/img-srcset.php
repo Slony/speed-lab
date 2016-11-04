@@ -1,14 +1,16 @@
 <?php if(SRCSET !== "false"): ?>
 
+  <?php $randNum = rand(1,8);?>
   <img
-  src="http://placehold.it/1200x800"
-  sizes="(max-width:423px) 70vw"
+  src="http://placehold.it/1200x80<?= $randNum; ?>"
+  media="(min-width: 320px) 330w, (min-width: 400px) 400w, (min-width: 640px) 640w, (min-width: 1000px) 1000w"
   srcset="
-  http://placehold.it/320x140 330w,
-  http://placehold.it/400x200 400w,
-  http://placehold.it/640x300 640w,
-  http://placehold.it/1000x400  1000w"
-  alt="" class="img-responsive" />
+  http://placehold.it/320x14<?= $randNum; ?> 330w,
+  http://placehold.it/400x20<?= $randNum; ?> 400w,
+  http://placehold.it/640x30<?= $randNum; ?> 640w,
+  http://placehold.it/1000x40<?= $randNum; ?> 1000w"
+  alt="" class="img-responsive img-center" />
+
 
 <?php else: ?>
 

@@ -1,4 +1,4 @@
-<?php require('functions.php'); ?>
+<?php require('inc/functions.php'); ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -11,6 +11,7 @@
   <!-- CSS -->
   <?php if(CSS !== "inline") : ?>
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/sprite.css">
   <?php else : ?>
     <?php include('inc/css-async.php'); ?>
   <?php endif; ?>
