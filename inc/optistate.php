@@ -71,6 +71,19 @@
       <?php endif; ?>
     </li>
 
+    <li>
+      <?php if (DNSPREFETCH == "false"): ?>
+        <span class="error">
+          You are loading contents for a third party server without Prefectch :(
+          <a href="<?= URL;?>&dnsprefetch"> we can optimize that... </a>
+        </span>
+      <?php else: ?>
+        <span class="success">
+          Yohoo ! You speed-up DNS lookup thanks to dns-prefetch
+        </span>
+      <?php endif; ?>
+    </li>
+
 
 
   </ul>

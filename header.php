@@ -8,6 +8,9 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <?php if(DNSPREFETCH !== "false"): ?>
+    <link rel="dns-prefetch" href="//placehold.it">
+  <?php endif;?>
   <!-- CSS -->
   <?php if(CSS !== "inline") : ?>
     <link rel="stylesheet" type="text/css" href="css/app.css">
