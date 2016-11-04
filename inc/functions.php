@@ -39,6 +39,13 @@ if(isset($_GET['sprite'])){
   define('SPRITE','false');
 }
 
+// Prefectch
+if(isset($_GET['dnsprefetch'])){
+  ( $_GET['dnsprefectch'] !== "") ? define('DNSPREFETCH','true') : "" ;
+}else{
+  define('DNSPREFETCH','false');
+}
+
 // URL
 $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
