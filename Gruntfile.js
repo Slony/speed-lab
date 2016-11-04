@@ -162,14 +162,32 @@ module.exports = function(grunt){
         dest: 'img/sprites/spritesheet.png',
         destCss: 'css/sprite.css'
       },
-    }
+    },
 
+
+
+
+    perfbudget: {
+      default: {
+        options: {
+          url: 'http://antoinebrossault.com/preprod/speed-lab/',
+          key: 'A.fe2a1099fc7b5c8643542df941cd2e3d',
+          location : 'ec2-eu-west-1',
+          connectivity : "3GFast",
+          budget: {
+            visualComplete: '4000',
+            SpeedIndex: '1500'
+          }
+        }
+      }
+    }
 
 
 
 
   });
 
+  grunt.loadNpmTasks('grunt-perfbudget');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-contrib-concat');
