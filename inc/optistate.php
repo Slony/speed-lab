@@ -61,7 +61,7 @@
     <li>
       <?php if (SPRITE == "false"): ?>
         <span class="error">
-          At the bottom of this there's page multiples images and no sprite
+          At the bottom of this page there's multiples images and no sprite
           <a href="<?= URL;?>&sprite"> we can optimize that... </a>
         </span>
       <?php else: ?>
