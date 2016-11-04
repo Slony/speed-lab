@@ -14,7 +14,8 @@
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-critical": "^0.2.1"
+    "grunt-critical": "^0.2.1",
+    "grunt-perfbudget": "^0.1.9"
   },
   "dependencies": {
     "grunt": "^1.0.1",

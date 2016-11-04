@@ -96,9 +96,27 @@ module.exports = function(grunt){
 
           'js/parts/doc_ready_end.js'
         ],
+
         // Selectionne les js dans l'odre donné
         dest: 'js/app.js', // crer un fichier de destination
       },
+
+
+      desktop: { // grunt concat:desktop
+        src: [
+
+          'js/libs/owl.js',
+
+          'js/parts/doc_ready_start.js',
+
+          'js/parts/sliders.js',
+
+          'js/parts/doc_ready_end.js'
+        ],
+        // Selectionne les js dans l'odre donné
+        dest: 'js/app-desktop.js', // crer un fichier de destination
+      },
+
     },
 
 
@@ -133,12 +151,26 @@ module.exports = function(grunt){
           spawn: false,
         },
       },
+    },
+
+
+
+
+    sprite:{
+      all: {
+        src: 'img/sprites/raw/*.png',
+        dest: 'img/sprites/spritesheet.png',
+        destCss: 'css/sprite.css'
+      },
     }
+
+
 
 
 
   });
 
+  grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');

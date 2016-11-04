@@ -58,6 +58,19 @@
       <?php endif; ?>
     </li>
 
+    <li>
+      <?php if (SPRITE == "false"): ?>
+        <span class="error">
+          At the bottom of this there's page multiples images and no sprite
+          <a href="<?= URL;?>&sprite"> we can optimize that... </a>
+        </span>
+      <?php else: ?>
+        <span class="success">
+          Yohoo ! There's a sprite you saved 4 HTTP requests :)
+        </span>
+      <?php endif; ?>
+    </li>
+
 
 
   </ul>
