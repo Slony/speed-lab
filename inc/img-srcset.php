@@ -12,8 +12,13 @@
   alt="" class="img-responsive img-center" />
 
 
-<?php else: ?>
 
-  <img src="http://placehold.it/1200x800" alt="spaceship" class="img-responsive img-center" >
+<?php else : ?>
+
+  <?php if (LAZYLOADING == "true"): ?>
+    <img class="lazy img-responsive img-center" data-original="http://placehold.it/1200x800" >
+  <?php else : ?>
+    <img src="http://placehold.it/1200x800" alt="spaceship" class="img-responsive img-center" >
+  <?php endif;?>
 
 <?php endif; ?>

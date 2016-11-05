@@ -58,6 +58,20 @@
       <?php endif; ?>
     </li>
 
+
+    <li>
+      <?php if (SRCSET !== "false" && LAZYLOADING == "false"): ?>
+        <span class="error">
+          Img are loaded right away, we can use the lazy loading techiques.
+          <a href="<?= URL;?>&lazyloading"> we can optimize that... </a>
+        </span>
+      <?php else: ?>
+        <span class="success">
+          Yohoo ! IMG are loaded with lazy loading
+        </span>
+      <?php endif; ?>
+    </li>
+
     <li>
       <?php if (SPRITE == "false"): ?>
         <span class="error">
