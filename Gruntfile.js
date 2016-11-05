@@ -6,9 +6,9 @@ module.exports = function(grunt){
     critical: {
       test: {
         options: {
-          base: './',
+          base: '../',
           css: [
-            'app.css'
+            'css/app.css'
           ],
           width: 450,
           height: 800,
@@ -16,7 +16,7 @@ module.exports = function(grunt){
           extract : true
         },
         src: 'http://localhost:8888/speed-lab/',
-        dest: 'critical.css'
+        dest: 'css/critical.css'
       }
     },
 

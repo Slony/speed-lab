@@ -46,6 +46,14 @@ if(isset($_GET['dnsprefetch'])){
   define('DNSPREFETCH','false');
 }
 
+
+// Prefectch
+if(isset($_GET['lazyloading'])){
+  define('LAZYLOADING','true');
+}else{
+  define('LAZYLOADING','false');
+}
+
 // URL
 $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
