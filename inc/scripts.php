@@ -9,3 +9,6 @@
 
 
 <?php endif; ?>
+
+
+<script>loadCSS( "<?= BASEURL;?>css/app.css" );</script>

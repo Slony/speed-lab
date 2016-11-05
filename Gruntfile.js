@@ -15,7 +15,7 @@ module.exports = function(grunt){
           minify: true,
           extract : true
         },
-        src: 'http://localhost:8888/speed-test/lab/',
+        src: 'http://localhost:8888/speed-lab/',
         dest: 'critical.css'
       }
     },

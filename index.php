@@ -49,8 +49,18 @@
 
 	</footer>
 
+
+
 	<!-- SCRIPT FOOTER -->
 	<?php (SCRIPT == "footer") ? include('inc/scripts.php') : ""; ?>
+
+
+	<!-- CSS async -->
+	<?php if(CSS == "inline"): ?>
+		<script>loadCSS( "<?= BASEURL;?>css/app.css" );</script>
+	<?php endif;?>
+
+
 
 
 </body>
