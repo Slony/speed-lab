@@ -182,10 +182,8 @@ module.exports = function(grunt){
       }
     }
 
-
-
-
   });
+
 
   grunt.loadNpmTasks('grunt-perfbudget');
   grunt.loadNpmTasks('grunt-spritesmith');

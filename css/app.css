@@ -26,7 +26,7 @@ h2{
 /* Header */
 
 .banner-full-screen {
-  background-image: url("http://lorempicsum.com/futurama/1200/800/4");
+  background-image: url("../img/1200x800.jpeg");
   position: relative;
   background-position: center top;
   background-repeat: no-repeat;
@@ -39,25 +39,19 @@ h2{
 
 @media only screen and (max-width: 768px){
   .banner-full-screen {
-    background-image: url("http://lorempicsum.com/futurama/768/400/4");
+    background-image: url("../img/768x400.jpeg");
   }
 }
 
 @media only screen and (max-width: 450px){
   .banner-full-screen {
-    background-image: url("http://lorempicsum.com/futurama/450/400/4");
-  }
-}
-
-@media only screen and (max-width: 450px){
-  .banner-full-screen {
-    background-image: url("http://lorempicsum.com/futurama/450/400/4");
+    background-image: url("../img/450x400.jpeg");
   }
 }
 
 @media only screen and (max-width: 380px){
   .banner-full-screen {
-    background-image: url("http://lorempicsum.com/futurama/450/400/4");
+    background-image: url("../img/380x400.jpeg");
   }
 }
 
