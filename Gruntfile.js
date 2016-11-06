@@ -6,7 +6,7 @@ module.exports = function(grunt){
     critical: {
       test: {
         options: {
-          base: '../',
+          base: '',
           css: [
             'css/app.css'
           ],
@@ -180,11 +180,23 @@ module.exports = function(grunt){
           }
         }
       }
+    },
+
+
+    replace: {
+      example: {
+        src: ['css/critical.css'],             // source files array (supports minimatch)
+        dest: 'css/critical.css',             // destination directory or file
+        replacements: [{
+          from: '/css',                   // string replacement
+          to: 'css'
+        }],
+      }
     }
 
   });
 
-
+  grunt.loadNpmTasks('grunt-text-replace');
   grunt.loadNpmTasks('grunt-perfbudget');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-critical');
@@ -194,5 +206,6 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('critical-css', ['critical','replace']);
   // créer une tache à executer, ici on execute Concat puis Uglify
 };
