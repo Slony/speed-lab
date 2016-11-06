@@ -130,3 +130,22 @@ i{display: inline-block;}
   display: block;
   margin: auto;
 }
+
+.bg-video{
+  position: relative;
+  width: 450px;
+  height: 250px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.bg-video .player-btn{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+}

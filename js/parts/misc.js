@@ -6,3 +6,9 @@ $('#btn-header').click(function(e){
   }, 2000);
 
 });
+
+
+
+$('#banner-player').magnificPopup({
+  type: 'iframe'
+});

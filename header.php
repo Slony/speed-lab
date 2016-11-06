@@ -12,10 +12,12 @@
     <link rel="dns-prefetch" href="//placehold.it">
   <?php endif;?>
   <!-- CSS -->
-  <?php if(CSS !== "inline") : ?>
+  <?php if(CSS !== "inline" && SPRITE =="true") : ?>
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="css/sprite.css">
-  <?php else : ?>
+  <?php elseif(CSS !== "inline" && SPRITE =="false") : ?>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+  <?php else: ?>
     <?php include('inc/css-async.php'); ?>
   <?php endif; ?>
 
