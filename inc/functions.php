@@ -82,7 +82,7 @@ if(strpos($url,'?') !== false){
 */
 
 if(ADAPTIVE == "true"){
-  require_once 'libs/Mobile_Detect.php';
+  require_once 'libs/mobile_detect.php';
   $detect = new Mobile_Detect;
 }else{
   class Mobile_detect {
