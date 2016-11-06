@@ -1,0 +1,30 @@
+/** ======================================
+* Base : List
+* ======================================= */
+
+ul, ol {
+  margin-bottom: $base-line-height / 2;
+  padding-left: $base-line-height;
+  &:first-child {
+    margin-top: 0
+  }
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+dl {
+  margin-bottom: $base-line-height / 2;
+  dt {
+    font-weight: bold;
+    margin-top: $base-line-height / 2;
+  }
+  dd {
+    margin: 0;
+  }
+}

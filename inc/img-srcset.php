@@ -3,7 +3,7 @@
 
   <img
   src="css/img/1200x800.jpeg"
-  media="(min-width: 320px) 330w, (min-width: 400px) 400w, (min-width: 640px) 640w, (min-width: 1000px) 1000w"
+  media="(min-width: 320px) 300w, (min-width: 400px) 400w, (min-width: 640px) 640w, (min-width: 1000px) 1000w"
   srcset="
   css/img/450x400.jpeg  300w,
   css/img/450x400.jpeg  400w,

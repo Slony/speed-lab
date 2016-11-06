@@ -11,7 +11,13 @@
   <div class="bg-video"  style="background-image:url(http://lorempicsum.com/simpsons/768/400/1);background-position: center center;
   ">
   <a id="banner-player" href="https://www.youtube.com/watch?v=T2R3ZYTA3aQ">
-    <img class="player-btn" src="img/home-banner-promo-player.png">
+
+    <?php if(LAZYLOADING == "true"): ?>
+      <img class="player-btn lazyload"  data-src="img/home-banner-promo-player.png">
+    <?php else : ?>
+      <img class="player-btn" src="img/home-banner-promo-player.png">
+    <?php endif;?>
+
   </a>
 </div>
 

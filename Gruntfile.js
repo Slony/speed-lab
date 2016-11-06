@@ -141,6 +141,16 @@ module.exports = function(grunt){
     },
 
 
+    compass: {                  // Task
+      dev: {                    // Another target
+        options: {
+          outputStyle:'compressed',
+          sassDir: 'sass',
+          cssDir: 'css',
+          watch : true
+        }
+      },
+    },
 
 
     /**
@@ -201,6 +211,8 @@ module.exports = function(grunt){
 
   });
 
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-text-replace');
   grunt.loadNpmTasks('grunt-spritesmith');

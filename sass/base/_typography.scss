@@ -1,0 +1,70 @@
+/** ======================================
+* Base : Typography
+* ======================================= */
+
+h1 {
+  @include title;
+  font-size: $font-size-XXL;
+}
+
+h2 {
+  @include title;
+  font-size: $font-size-XL;;
+}
+
+h3 {
+  @include title;
+  font-size: $font-size-L;
+}
+
+h4 {
+  @include title;
+  font-size: $font-size-M;
+}
+
+h5 {
+  @include title;
+  font-size: $font-size-XS;
+}
+
+h6 {
+  @include title;
+  font-size: $font-size-XS;
+}
+
+p {
+  margin: $spacer-s 0;
+  &:first-child {
+    margin-top: 0
+  }
+}
+
+small {
+  font-size: em(16);
+}
+
+abbr[title] {
+  text-transform: lowercase;
+}
+
+abbr,
+acronym {
+  cursor: help;
+}
+
+blockquote{
+  font-size: $font-size-L;
+  line-height: $spacer-m;
+  font-style: italic;
+  font-family: serif;
+  background: $clr-0-lighten;
+  padding: $spacer-s;
+  color: $base-font-color;
+  font-weight: 300;
+  border-left: 5px solid $clr-0;
+  margin: 0 0 $spacer-s;
+  cite{
+    float: right; 
+    font-family: sans-serif;
+  }
+}

@@ -41,7 +41,7 @@ if(isset($_GET['sprite'])){
 
 // Prefectch
 if(isset($_GET['dnsprefetch'])){
-  ( $_GET['dnsprefectch'] !== "") ? define('DNSPREFETCH','true') : "" ;
+  define('DNSPREFETCH','true');
 }else{
   define('DNSPREFETCH','false');
 }
