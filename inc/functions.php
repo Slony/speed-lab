@@ -54,6 +54,14 @@ if(isset($_GET['lazyloading'])){
   define('LAZYLOADING','false');
 }
 
+
+// Prefectch
+if(isset($_GET['adaptive'])){
+  define('ADAPTIVE','true');
+}else{
+  define('ADAPTIVE','false');
+}
+
 // URL
 $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -64,4 +72,22 @@ if(strpos($url,'?') !== false){
   define ("URL", $url);
 }else{
   define ("URL","$url?");
+}
+
+
+/**
+*
+*	Libs
+*
+*/
+
+if(ADAPTIVE == "true"){
+  require_once 'libs/Mobile_Detect.php';
+  $detect = new Mobile_Detect;
+}else{
+  class Mobile_detect {
+    public function isMobile(){
+    }
+  }
+  $detect = new Mobile_Detect;
 }

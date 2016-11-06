@@ -99,6 +99,20 @@
     </li>
 
 
+    <li>
+      <?php if (ADAPTIVE == "false"): ?>
+        <span class="error">
+          The slider used on the desktop version is hidden in CSS. The scripts, CSS, images are loaded anyway on mobile :(
+          <a href="<?= URL;?>&adaptive"> we can optimize that... </a>
+        </span>
+      <?php else: ?>
+        <span class="success">
+          Yohoo ! Thanks to the User-Agent detection the slider and his assets are not loaded on mobile :)
+        </span>
+      <?php endif; ?>
+    </li>
+
+
 
   </ul>
 

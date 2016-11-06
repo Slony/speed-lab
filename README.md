@@ -82,3 +82,20 @@ CSS example
   margin: auto;
 }
 ```
+
+
+## RESS (Responsive Web Design with Server-Side Components)
+
+To conditionnaly load some scripts / css...  based on the User-Agent I use [mobile detect](https://github.com/serbanghita/Mobile-Detect)
+
+```php
+<?php
+require_once 'Mobile_Detect.php';
+$detect = new Mobile_Detect;
+
+if($detect->isMobile()){
+  // do stuff
+}else {
+  // do stuff
+}
+```

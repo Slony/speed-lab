@@ -23,6 +23,10 @@
     <?php include('inc/css-async.php'); ?>
   <?php endif; ?>
 
+  <?php if (!$detect->isMobile()): ?>
+    <link rel="stylesheet" type="text/css" href="css/libs/desktop/owl.css">
+  <?php endif;?>
+
 
   <!-- SCRIPT HEADER -->
   <?php (SCRIPT !== "footer") ? include('inc/scripts.php') : ""; ?>
