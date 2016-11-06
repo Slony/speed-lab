@@ -12,9 +12,7 @@
   alt="" class="img-responsive img-center" />
 
 
-
 <?php elseif (LAZYLOADING == "true" && SRCSET == "true"): ?>
-
 
   <img
   alt=""
@@ -26,7 +24,6 @@
   css/img/1200x800.jpeg 1000w"
   data-src="css/img/1200x800.jpeg"
   class="lazyload img-responsive img-center" />
-
 
 <?php elseif (LAZYLOADING == "true" && SRCSET == "false") : ?>
 
