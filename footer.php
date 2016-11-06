@@ -29,7 +29,11 @@
 
 <!-- CSS async -->
 <?php if(CSS == "inline"): ?>
+  <script>loadCSS( "<?= BASEURL;?>css/libs/magnific-popup.css" );</script>
   <script>loadCSS( "<?= BASEURL;?>css/app.css" );</script>
+<?php endif;?>
+
+<?php if(SPRITE == "true"): ?>
   <script>loadCSS( "<?= BASEURL;?>css/sprite.css" );</script>
 <?php endif;?>
 

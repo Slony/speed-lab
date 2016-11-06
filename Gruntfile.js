@@ -2,7 +2,11 @@ module.exports = function(grunt){
 
   grunt.initConfig({
 
-
+    /**
+    *
+    *  Extract critical CSS
+    *
+    */
     critical: {
       test: {
         options: {
@@ -20,6 +24,22 @@ module.exports = function(grunt){
       }
     },
 
+
+    /**
+    *
+    *  Replace PATH CSS critical
+    *
+    */
+    replace: {
+      example: {
+        src: ['css/critical.css'],             // source files array (supports minimatch)
+        dest: 'css/critical.css',             // destination directory or file
+        replacements: [{
+          from: '/css',                   // string replacement
+          to: 'css'
+        }],
+      }
+    },
 
     /**
     *
@@ -60,6 +80,7 @@ module.exports = function(grunt){
 
           'js/libs/loadCss.js',
           'js/libs/jquery.js',
+          'js/libs/magnific-popup.js',
 
 
           'js/parts/doc_ready_start.js',
@@ -183,16 +204,6 @@ module.exports = function(grunt){
     },
 
 
-    replace: {
-      example: {
-        src: ['css/critical.css'],             // source files array (supports minimatch)
-        dest: 'css/critical.css',             // destination directory or file
-        replacements: [{
-          from: '/css',                   // string replacement
-          to: 'css'
-        }],
-      }
-    }
 
   });
 

@@ -60,9 +60,9 @@
 
 
     <li>
-      <?php if (SRCSET !== "false" && LAZYLOADING == "false"): ?>
+      <?php if (LAZYLOADING == "false"): ?>
         <span class="error">
-          Img are loaded right away, we can use the lazy loading techiques.
+          All the images are loaded right away, we can use the lazy loading techiques to fix that.
           <a href="<?= URL;?>&lazyloading"> we can optimize that... </a>
         </span>
       <?php else: ?>

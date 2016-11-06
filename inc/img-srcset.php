@@ -1,24 +1,39 @@
-<?php if(SRCSET !== "false"): ?>
+<?php if(SRCSET == "true" && LAZYLOADING == "false"): ?>
 
-  <?php $randNum = rand(1,8);?>
+
   <img
-  src="http://placehold.it/1200x80<?= $randNum; ?>"
+  src="css/img/1200x800.jpeg"
   media="(min-width: 320px) 330w, (min-width: 400px) 400w, (min-width: 640px) 640w, (min-width: 1000px) 1000w"
   srcset="
-  http://placehold.it/320x14<?= $randNum; ?> 330w,
-  http://placehold.it/400x20<?= $randNum; ?> 400w,
-  http://placehold.it/640x30<?= $randNum; ?> 640w,
-  http://placehold.it/1000x40<?= $randNum; ?> 1000w"
+  css/img/450x400.jpeg  300w,
+  css/img/450x400.jpeg  400w,
+  css/img/768x400.jpeg  640w,
+  css/img/1200x800.jpeg 1000w"
   alt="" class="img-responsive img-center" />
 
 
 
-<?php else : ?>
+<?php elseif (LAZYLOADING == "true" && SRCSET == "true"): ?>
 
-  <?php if (LAZYLOADING == "true"): ?>
-    <img class="lazy img-responsive img-center" data-original="http://placehold.it/1200x800" >
-  <?php else : ?>
-    <img src="http://placehold.it/1200x800" alt="spaceship" class="img-responsive img-center" >
-  <?php endif;?>
 
-<?php endif; ?>
+  <img
+  alt=""
+  data-sizes="auto"
+  data-srcset="
+  css/img/450x400.jpeg 300w,
+  css/img/450x400.jpeg 400w,
+  css/img/768x400.jpeg 640w,
+  css/img/1200x800.jpeg 1000w"
+  data-src="css/img/1200x800.jpeg"
+  class="lazyload img-responsive img-center" />
+
+
+<?php elseif (LAZYLOADING == "true" && SRCSET == "false") : ?>
+
+  <img class="lazyload img-responsive img-center" data-src="css/img/1200x800.jpeg" />
+
+<?php else: ?>
+
+  <img class="img-responsive img-center" src="css/img/1200x800.jpeg" />
+
+<?php endif;?>

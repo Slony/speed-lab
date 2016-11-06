@@ -34,7 +34,7 @@ if(isset($_GET['srcset'])){
 
 // SPRITE
 if(isset($_GET['sprite'])){
-  ( $_GET['sprite'] !== "") ? define('SPRITE','true') : "" ;
+  define('SPRITE','true');
 }else{
   define('SPRITE','false');
 }
