@@ -1,0 +1,40 @@
+
+
+.pagination{
+  display: block;
+  margin: auto;
+  width: auto;
+  font-size: 15px;
+  margin-bottom: 23px;
+  padding: 0px;
+  li{
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+    min-width: 30px;
+    margin: 3px;
+    // padding: 3px;
+    text-align: center;
+    border: solid 1px black;
+    text-transform: uppercase;
+    margin-right: 7px;
+    .next,.prev{
+      padding-right: 27px;
+      padding-left: 27px;
+      line-height: 21px;
+    }
+
+    a{
+      border: solid transparent 13px;
+      text-decoration: none;
+    }
+
+  }
+
+  .active{
+    border: solid transparent 13px;
+    background-color: rgb(38, 38, 38);
+    color: #FFF;
+  }
+
+}
