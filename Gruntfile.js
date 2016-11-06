@@ -166,8 +166,8 @@ module.exports = function(grunt){
     */
     watch: {
       scripts: {
-        files: ['js/parts/*.js','js/parts/*/*.js','js/parts/*/*/*.js'],
-        tasks: ['concat','jshint','uglify'],
+        files: ['js/parts/*.js','js/parts/*/*.js','js/parts/*/*/*.js','css/*.css','css/*/*.css', '!css/*.min.css'],
+        tasks: ['concat','jshint','uglify','cssmin'],
         options: {
           spawn: false,
         },
@@ -186,29 +186,23 @@ module.exports = function(grunt){
     },
 
 
-
-
-    perfbudget: {
-      default: {
-        options: {
-          url: 'http://antoinebrossault.com/preprod/speed-lab/',
-          key: 'A.fe2a1099fc7b5c8643542df941cd2e3d',
-          location : 'ec2-eu-west-1',
-          connectivity : "3GFast",
-          budget: {
-            visualComplete: '4000',
-            SpeedIndex: '1500'
-          }
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      combine: {
+        files: {
+          'css/app.min.css': ['css/*.css','css/*/*.css','!critical.css']
         }
       }
-    },
-
+    }
 
 
   });
 
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-text-replace');
-  grunt.loadNpmTasks('grunt-perfbudget');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-contrib-concat');

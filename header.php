@@ -15,8 +15,10 @@
   <?php if(CSS !== "inline" && SPRITE =="true") : ?>
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="css/sprite.css">
+    <link rel="stylesheet" type="text/css" href="css/libs/magnific-popup.css">
   <?php elseif(CSS !== "inline" && SPRITE =="false") : ?>
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/libs/magnific-popup.css">
   <?php else: ?>
     <?php include('inc/css-async.php'); ?>
   <?php endif; ?>
