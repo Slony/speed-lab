@@ -193,7 +193,7 @@ module.exports = function(grunt){
       },
       combine: {
         files: {
-          'css/app.min.css': ['css/*.css','css/*/*.css','!critical.css']
+          'css/app.min.css': ['css/*.css','css/*/*.css','!css/desktop/*.css','!critical.css']
         }
       }
     }

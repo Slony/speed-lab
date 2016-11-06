@@ -16,6 +16,9 @@
 
 		<?php include('inc/optistate.php');?>
 
+		<?php include('inc/slider.php');?>
+
+
 		<?php for($i = 0 ; $i < 10; $i++): ?>
 			<?= ($i == 1 || $i == 5) ? " <h2> Lorem ipsum dolor sit </h2>" : ""; ?>
 			<?php include('inc/img-srcset.php'); ?>

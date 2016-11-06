@@ -1,4 +1,4 @@
-$('.home-slider').owlCarousel({
+$('#home-slider').owlCarousel({
   autoplay:true,
   autoplayTimeout:8000,
   autoplayHoverPause:true,
