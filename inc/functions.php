@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(-1);
+ini_set('display_errors', 'On');
 // Script Define
 if(isset($_GET['script'])){
   ( $_GET['script'] == "footer") ? define('SCRIPT','footer') : "" ;
@@ -47,13 +48,19 @@ if(isset($_GET['dnsprefetch'])){
 }
 
 
-// Prefectch
+// LAZYLOADING
 if(isset($_GET['lazyloading'])){
   define('LAZYLOADING','true');
 }else{
   define('LAZYLOADING','false');
 }
 
+// IFRAME
+if(isset($_GET['iframe'])){
+  define('IFRAME','true');
+}else{
+  define('IFRAME','false');
+}
 
 // Prefectch
 if(isset($_GET['adaptive'])){

@@ -2,7 +2,6 @@
 <footer>
 
   <div class="social-group">
-
     <?php if(SPRITE !== "false"): ?>
       <a href="#"><i class="icon-github"></i></a>
       <a href="#"><i class="icon-fork"></i></a>
@@ -16,6 +15,16 @@
       <a href="#"><img src="img/sprites/raw/twitter.png"></a>
       <a href="#"><img src="img/sprites/raw/equals.png"></a>
     <?php endif;?>
+  </div> <!-- social-group -->
+
+
+  <div class="anim-container u-mtm u-sm-mtl img-center u-pls">
+    <div class="jetpack">
+      <div class="fly">
+        <div class="hombre"></div>
+        <div class="fuego"></div>
+      </div>
+    </div>
   </div>
 
 

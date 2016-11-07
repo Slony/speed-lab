@@ -88,29 +88,6 @@
 }
 
 
-@keyframes armMove {
-	0%{
-		transform: rotate(0deg);
-	}
-
-	50%{
-		transform: rotate(20deg);
-	}
-}
-
-@keyframes rabitMove {
-	0%{
-		transform: translateY(0px);
-	}
-
-	50%{
-		transform: translateY(-20px);
-	}
-}
-
-
-
-
 
 .home-header{
 	color: #FFF;
@@ -168,89 +145,6 @@
 		animation: baloonMove 7.5s infinite;
 	}
 
-	// magicien
-	.magicien{
-		position: relative;
-
-		.corp{
-			position: absolute;
-			width: 336px;
-			right: 0px;
-		}
-
-		.bras{
-			position: absolute;
-			width: 138px;
-			right: 263px;
-			transform-origin: right 70%;
-			top: -44px;
-			animation: armMove 5s infinite;
-		}
-
-		.lapin{
-			position: absolute;
-			right: 15px;
-			width: 97px;
-			top: 68px;
-			animation: rabitMove 5s infinite;
-		}
-	}
-
-
-
-	.baguette{
-		position: absolute;
-		width: 300px;
-		top: -130px;
-		transform: rotate(-30deg);
-		display: none;
-
-		//	-webkit-animation: baguette 7s infinite;
-		//animation:  baguette 7s infinite;
-	}
-
-
-
-	@-webkit-keyframes baguette {
-
-		0%{
-			right: -300px
-		}
-
-		25%{
-			right:300px;
-			top: -200px;
-		}
-
-		30%{
-			transform: rotate(-30deg);
-		}
-
-		32%{
-			transform: rotate(10deg);
-		}
-
-		35%{
-			transform: rotate(-30deg);
-		}
-
-		37%{
-			transform: rotate(10deg);
-		}
-
-		40%{
-			transform: rotate(-30deg);
-		}
-
-		50%{
-			right:300px;
-			top: -200px;
-		}
-		100%{
-			top: -130px;
-			right: -300px;
-		}
-	}
 
 
 	// anim
@@ -265,7 +159,6 @@
 		font-size:90px;
 		font-weight: 400;
 	}
-
 
 
 
@@ -286,8 +179,19 @@
 }
 
 
-
-
+.home-header{
+	.button--dblcontent{
+		border: 1px solid #FFF;
+		color: #FFF;
+		max-width: 280px;
+		display: block;
+		margin: auto;
+		background-color: rgba(47, 143, 164, 0.61);
+		&:hover{
+			.hovered {bottom: 54px;}
+		}
+	}
+}
 
 
 
@@ -334,15 +238,4 @@ i{display: inline-block;}
 
 @media only screen and (max-width: 768px){
 	.hidden-mobile{display: none!important;}
-}
-
-
-/*Footer*/
-
-footer{
-	margin-top: 30px;
-	min-height: 200px;
-	background-color: #f9f9f9;
-	border-top: 3px solid #ececec;
-	padding-top: 20px;
 }
