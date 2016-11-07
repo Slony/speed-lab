@@ -18,31 +18,43 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-equals {
   background-image: url(../img/sprites/spritesheet.png);
-  background-position: 0px 0px;
+  background-position: 0px -96px;
   width: 32px;
   height: 32px;
 }
 .icon-fork {
   background-image: url(../img/sprites/spritesheet.png);
-  background-position: -32px 0px;
+  background-position: -32px -96px;
   width: 32px;
   height: 32px;
 }
 .icon-github {
   background-image: url(../img/sprites/spritesheet.png);
-  background-position: 0px -32px;
+  background-position: -64px -96px;
   width: 32px;
   height: 32px;
 }
+.icon-lightning-black {
+  background-image: url(../img/sprites/spritesheet.png);
+  background-position: 0px 0px;
+  width: 96px;
+  height: 96px;
+}
+.icon-lightning {
+  background-image: url(../img/sprites/spritesheet.png);
+  background-position: -96px 0px;
+  width: 96px;
+  height: 96px;
+}
 .icon-plus {
   background-image: url(../img/sprites/spritesheet.png);
-  background-position: -32px -32px;
+  background-position: -96px -96px;
   width: 32px;
   height: 32px;
 }
 .icon-twitter {
   background-image: url(../img/sprites/spritesheet.png);
-  background-position: -64px 0px;
+  background-position: -128px -96px;
   width: 32px;
   height: 32px;
 }

@@ -30,7 +30,14 @@
 
 			<p class="logo-catchline">Front end webperformance playground</p>
 
-
+			<a href="#" class="button button--dblcontent button--ghost u-txtUpper u-mtm" id="btn-header" data-scrollspeed="800">
+				<span class="initial">Start optimizing</span>
+				<?php if(SPRITE == "true"):?>
+					<span class="hovered"><i class="icon-lightning"></i></span>
+				<?php else : ?>
+					<span class="hovered"><img src="img/sprites/raw/lightning.png" /></span>
+				<?php endif;?>
+			</a>
 
 
 		</div>
@@ -47,9 +54,24 @@
 
 <div class="container">
 
+
+
 	<?php include('inc/optistate.php');?>
 
 	<?php include('inc/slider.php');?>
+
+
+</div> <!-- container -->
+
+<?php if(!$detect->isMobile()):?>
+	<div class="banner-promo u-mbm u-mtm clearfix hidden">
+		<p class="txtXL">
+			mobile Performance matter
+		</p>
+	</div>
+<?php endif;?>
+
+<div class="container">
 
 
 	<?php for($i = 0 ; $i < 10; $i++): ?>
@@ -59,6 +81,8 @@
 	<?php endfor; ?>
 
 	<?php include('inc/video-yt.php');?>
+
+	<?php //include('inc/img-progressive.php');?>
 
 
 </div> <!--container -->

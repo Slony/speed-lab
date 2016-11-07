@@ -1,6 +1,6 @@
 /** ======================================
- * Component : Button
- * ======================================= */
+* Component : Button
+* ======================================= */
 
 .button {
   position: relative;
@@ -27,8 +27,8 @@
 }
 
 /**
- * Modifier : Color
- * --------------------------------------- */
+* Modifier : Color
+* --------------------------------------- */
 
 .button--secondary {
   color: $base-font-color;
@@ -54,8 +54,8 @@
 }
 
 /**
- * Modifier : Size
- * --------------------------------------- */
+* Modifier : Size
+* --------------------------------------- */
 
 .button--small {
   padding: em(8) em(18);
@@ -75,5 +75,16 @@
   @media (max-width: $mq-s-up) {
     display: block;
     width: 100%;
+  }
+}
+
+
+
+.button--ghost{
+  background-color: transparent;
+  color: $clr-0-darken;
+  border: 1px solid $clr-0-darken;
+  &:hover{
+    color: inherit;
   }
 }
