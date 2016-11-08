@@ -52,6 +52,10 @@
 	}
 }
 
+@media only screen and (max-width: 768px){
+	.path{animation: none;fill-opacity: 1;}
+}
+
 
 @keyframes baloonMove {
 	0%{
