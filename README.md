@@ -1,6 +1,8 @@
 # speed-lab
 
-Fully optimized results : 
+Fully optimized results :
+
+WPT Tested From: Ireland - EC2 - Chrome - Emulated Motorola G - 3GFast
 
 [![speed-lab-wpt-SI.png](https://s13.postimg.org/stbf06qh3/speed_lab_wpt_SI.png)](https://postimg.org/image/tvlliq9ab/)
 
