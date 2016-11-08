@@ -127,6 +127,20 @@
         </li>
 
 
+        <li>
+          <?php if (NOIFRAME == "true"): ?>
+            <span class="error">
+              A YouTube vide iFrame is loaded right-away :(
+              <a href="<?= URL;?>&noiframe"> we can optimize that... </a>
+            </span>
+          <?php else: ?>
+            <span class="success">
+              Yohoo ! We load the YouTube video only on demand :)
+            </span>
+          <?php endif; ?>
+        </li>
+
+
 
       </ul>
 
@@ -155,7 +169,7 @@
     <a href="<?= BASEURL;?>" class="hidden button u-mrs u-mls button--blockMobile"> Click here to unoptimize this page </a>
 
 
-    <a href="<?= BASEURL;?>?script=footer&css=inline&js=min&srcset&lazyloading&sprite&dnsprefetch&adaptive"
+    <a href="<?= BASEURL;?>?script=footer&css=inline&js=min&srcset&lazyloading&sprite&dnsprefetch&adaptive&noiframe"
       class="button button--ghost button--dblcontent u-xs-mts button--blockMobile">
       <span class="initial">Click here to fully optimize this page</span>
       <?php if(SPRITE == "true"):?>
