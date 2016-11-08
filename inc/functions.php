@@ -56,10 +56,10 @@ if(isset($_GET['lazyloading'])){
 }
 
 // IFRAME
-if(isset($_GET['iframe'])){
-  define('IFRAME','true');
+if(isset($_GET['noiframe'])){
+  define('NOIFRAME','false');
 }else{
-  define('IFRAME','false');
+  define('NOIFRAME','true');
 }
 
 // Prefectch
