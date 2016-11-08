@@ -59,8 +59,7 @@
 
 .ws-opti-btn{
   .button--dblcontent{
-    display: inline-block;
-    vertical-align: bottom;
+    display: block;
     &:hover {.hovered {bottom: 53px;}}
   }
 }
