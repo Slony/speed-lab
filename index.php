@@ -61,6 +61,9 @@
 	<?php include('inc/slider.php');?>
 
 
+	<?php include('inc/mini-archive.php');?>
+
+
 </div> <!-- container -->
 
 <?php if(!$detect->isMobile()):?>

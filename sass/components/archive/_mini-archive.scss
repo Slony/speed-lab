@@ -65,9 +65,9 @@
 			.excerpt{font-size: 13px;font-style: italic;}
 		}
 
+		img{@include transition-duration(0.3s);}
 		&:hover{
 			img{
-				//@include transition-duration(0.3s);
 				@include scale(1.2);
 			}
 

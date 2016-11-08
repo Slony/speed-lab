@@ -65,6 +65,7 @@ if(isset($_GET['iframe'])){
 // Prefectch
 if(isset($_GET['adaptive'])){
   define('ADAPTIVE','true');
+  header('Vary: User-Agent');
 }else{
   define('ADAPTIVE','false');
 }

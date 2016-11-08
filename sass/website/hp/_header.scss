@@ -219,11 +219,13 @@ i{display: inline-block;}
 
 .bg-video{
 	position: relative;
+	background-position: center center;
 	width: 450px;
 	height: 250px;
 	max-width: 100%;
 	display: block;
 	margin: auto;
+
 }
 
 .bg-video .player-btn{
@@ -234,6 +236,10 @@ i{display: inline-block;}
 	left: 50%;
 	margin-left: -50px;
 	margin-top: -50px;
+	@include transition-duration(0.3s);
+	&:hover{
+		@include scale(1.2);
+	}
 }
 
 @media only screen and (max-width: 768px){
