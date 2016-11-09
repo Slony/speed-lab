@@ -142,6 +142,21 @@
 
 
 
+        <li>
+          <?php if (HTMLMIN == "false"): ?>
+            <span class="error">
+              HTML output is not minified  :(
+              <a href="<?= URL;?>&htmlmin"> we can optimize that... </a>
+            </span>
+          <?php else: ?>
+            <span class="success">
+              Yohoo ! HTML outup is minified :)
+            </span>
+          <?php endif; ?>
+        </li>
+
+
+
       </ul>
 
 
@@ -169,7 +184,7 @@
     <a href="<?= BASEURL;?>" class="hidden button u-mrs u-mls button--blockMobile"> Click here to unoptimize this page </a>
 
 
-    <a href="<?= BASEURL;?>?script=footer&css=inline&js=min&srcset&lazyloading&sprite&dnsprefetch&adaptive&noiframe"
+    <a href="<?= BASEURL;?>?script=footer&css=inline&js=min&srcset&lazyloading&sprite&dnsprefetch&adaptive&noiframe&htmlmin"
       class="button button--ghost button--dblcontent u-xs-mts button--blockMobile">
       <span class="initial">Click here to fully optimize this page</span>
       <?php if(SPRITE == "true"):?>
@@ -178,6 +193,8 @@
         <span class="hovered"><img src="img/sprites/raw/lightning-black.png" /></span>
       <?php endif;?>
     </a>
+
+
   </div>
 
 
