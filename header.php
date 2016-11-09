@@ -1,4 +1,5 @@
 <?php require('inc/functions.php'); ?>
+<?php (HTMLMIN == "true") ? ob_start("sanitize_output") : ""; ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>

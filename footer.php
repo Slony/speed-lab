@@ -50,3 +50,4 @@
 
 </body>
 </html>
+<?php (HTMLMIN == "true") ?  ob_end_flush() : ""; ?>

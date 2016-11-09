@@ -70,6 +70,13 @@ if(isset($_GET['adaptive'])){
   define('ADAPTIVE','false');
 }
 
+// HTML MIN
+if(isset($_GET['htmlmin'])){
+  define('HTMLMIN','true');
+}else{
+  define('HTMLMIN','false');
+}
+
 // URL
 $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -98,4 +105,25 @@ if(ADAPTIVE == "true"){
     }
   }
   $detect = new Mobile_Detect;
+}
+
+
+
+function sanitize_output($buffer) {
+
+  $search = array(
+    '/\>[^\S ]+/s',  // strip whitespaces after tags, except space
+    '/[^\S ]+\</s',  // strip whitespaces before tags, except space
+    '/(\s)+/s'       // shorten multiple whitespace sequences
+  );
+
+  $replace = array(
+    '>',
+    '<',
+    '\\1'
+  );
+
+  $buffer = preg_replace($search, $replace, $buffer);
+
+  return $buffer;
 }
