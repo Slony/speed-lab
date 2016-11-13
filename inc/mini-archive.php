@@ -19,9 +19,9 @@
           <div class="article-container">
             <div class="img-container">
               <?php if(LAZYLOADING == "true"):?>
-                <img class="img-responsive lazyload" data-src="http://lorempicsum.com/futurama/400/400/<?= $i;?>">
+                <img class="img-responsive lazyload" data-src="img/home/blog/400x400-<?= $i;?>.jpeg">
               <?php else : ?>
-                <img class="img-responsive" src="http://lorempicsum.com/futurama/400/400/<?= $i;?>">
+                <img class="img-responsive" src="img/home/blog/400x400-<?= $i;?>.jpeg">
               <?php endif; ?>
             </div>
             <div class="content-container">
