@@ -85,7 +85,19 @@ if(isset($_GET['asyncfont'])){
 }
 
 // URL
-$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+if (isset($_SERVER['HTTPS']) &&
+($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
+isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
+$_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+  $protocol = 'https://';
+}
+else {
+  $protocol = 'http://';
+}
+
+
+$url = "$protocol$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 // Base URL
 $res = explode('?',$url); define ("BASEURL", $res[0]);
