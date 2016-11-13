@@ -77,6 +77,13 @@ if(isset($_GET['htmlmin'])){
   define('HTMLMIN','false');
 }
 
+
+if(isset($_GET['asyncfont'])){
+  define('ASYNCFONT','true');
+}else{
+  define('ASYNCFONT','false');
+}
+
 // URL
 $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 

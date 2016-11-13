@@ -2,7 +2,7 @@
   margin: 0 0 $spacer-s 0;
   font-family: $header-font-family;
   line-height: $header-line-height;
-  font-weight: bold;
+  font-weight: $header-font-weight;
   color: $header-font-color;
   text-rendering: optimizeLegibility;
   &:first-child {

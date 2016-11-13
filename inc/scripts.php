@@ -19,3 +19,14 @@
 if (!$detect->isMobile()): ?>
 <script type="text/javascript" src="<?= BASEURL;?>js/app-desktop.js"></script>
 <?php endif;?>
+
+
+<?php if (ASYNCFONT == "true") : ?>
+  <script>
+  WebFont.load({
+    google: {
+      families: ['Open Sans']
+    }
+  });
+  </script>
+<?php endif; ?>

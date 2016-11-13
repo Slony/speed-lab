@@ -27,6 +27,11 @@
   <?php endif;?>
 
 
+  <?php if (ASYNCFONT == "false"): ?>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <?php endif; ?>
+
+
   <!-- SCRIPT HEADER -->
   <?php (SCRIPT !== "footer") ? include('inc/scripts.php') : ""; ?>
 

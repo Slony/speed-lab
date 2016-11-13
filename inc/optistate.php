@@ -14,7 +14,8 @@
 
     <div class="opti-state ">
 
-      <h2> Optimization status : </h2>
+      <h2> Lorem ipsum inactive </h2>
+      <h2 class="os"> Lorem ipsum active </h2>
       <ul class="u-mbm">
         <!-- Scripts states -->
         <li>

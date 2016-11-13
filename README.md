@@ -10,18 +10,8 @@ WPT Tested From: Ireland - EC2 - Chrome - Emulated Motorola G - 3GFast
 
 ## How to setup the environement
 
-
 ```
-npm install grunt --save-dev
-
-npm install grunt-critical --save-dev
-npm install grunt-contrib-concat --save-dev
-npm install grunt-contrib-watch --save-dev
-npm install grunt-contrib-uglify --save-dev
-npm install grunt-contrib-jshint --save-dev
-npm install grunt-contrib-cssmin --save-dev
-npm install grunt-text-replace --save-dev
-npm install grunt-spritesmith --save-dev
+npm install
 ```
 
 
@@ -68,6 +58,8 @@ class="lazyload img-responsive img-center" />
 
 Add the ```lazyload```class and prefix and set ```data-sizes```to ```auto```
 
+**We have sometime to load images bigger than the screen it self because of the pixel ratio**
+
 
 ### Lazy loading for the background images
 
@@ -105,3 +97,35 @@ if($detect->isMobile()){
   // do stuff
 }
 ```
+
+
+# Result in details
+
+
+## Gzip
+
+If we activate Gzip the Speed Index will not move but the weight of the page will decrease. Gzip works well for text files.
+
+[![Screen Shot 2016-11-11 at 5.28.16 PM.png](https://s14.postimg.org/rnzt3j6ip/Screen_Shot_2016_11_11_at_5_28_16_PM.png)](https://postimg.org/image/qyh0r65z1/)
+
+
+[![Screen Shot 2016-11-11 at 5.30.27 PM.png](https://s14.postimg.org/548ob75k1/Screen_Shot_2016_11_11_at_5_30_27_PM.png)](https://postimg.org/image/ua9mi16u5/)
+
+
+## Renderblocking VS non-blocking
+
+This optimization is about putting your critical css direclty in the document. (Only for HTTP 1.1, for HTTP2 use server push instead). **This optimization can decrease your speed index by 50%**
+
+[![Renderblocking VS non-blocking](https://s17.postimg.org/6ku2e04zj/filmstrip_2.png)](https://postimg.org/image/xinzfqpmj/)
+
+The blocking behavior waterfall :
+[![Screen Shot 2016-11-11 at 10.26.57 AM.png](https://s11.postimg.org/qg34kbi43/Screen_Shot_2016_11_11_at_10_26_57_AM.png)](https://postimg.org/image/ridb2v0xb/)
+
+The non-blocking behavior waterfall :
+
+[![Screen Shot 2016-11-11 at 10.29.19 AM.png](https://s17.postimg.org/62ec16ntr/Screen_Shot_2016_11_11_at_10_29_19_AM.png)](https://postimg.org/image/o57esejob/)
+
+
+Huge Speed-index drop !
+
+[![si-drop.png](https://s16.postimg.org/rd1bmadad/si_drop.png)](https://postimg.org/image/63dpbfwzl/)
