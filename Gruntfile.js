@@ -81,6 +81,7 @@ module.exports = function(grunt){
           'js/libs/loadCss.js',
           'js/libs/jquery.js',
           'js/libs/magnific-popup.js',
+          'js/libs/async-gfont.js',
 
 
           'js/parts/doc_ready_start.js',
