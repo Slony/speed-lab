@@ -1,4 +1,19 @@
-<?php require('inc/functions.php'); ?>
+<?php require('inc/functions.php');
+
+if(SERVERPUSH == "true"):
+
+  function push_to_browser($as, $uri) {
+    header('Link: ' . $uri . '; rel=preload; as=' . $as, false);
+  }
+
+  $assets = array(
+    '<css/critical.css>' => 'style'
+  );
+
+  array_walk( $assets, 'push_to_browser');
+
+endif;
+?>
 <?php (HTMLMIN == "true") ? ob_start("sanitize_output") : ""; ?>
 <!DOCTYPE html>
 <html class="no-js">
@@ -13,7 +28,7 @@
     <link rel="dns-prefetch" href="//placehold.it">
   <?php endif;?>
   <!-- CSS -->
-  <?php if(CSS !== "inline" && SPRITE =="true") : ?>
+  <?php if(CSS !== "inline" && SPRITE =="true" && SERVERPUSH == "false") : ?>
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="css/sprite.css">
   <?php elseif(CSS !== "inline" && SPRITE =="false") : ?>
