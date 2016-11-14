@@ -84,6 +84,14 @@ if(isset($_GET['asyncfont'])){
   define('ASYNCFONT','false');
 }
 
+
+// servPush
+if(isset($_GET['serverpush'])){
+  define('SERVERPUSH','true');
+}else{
+  define('SERVERPUSH','false');
+}
+
 // URL
 
 if (isset($_SERVER['HTTPS']) &&
