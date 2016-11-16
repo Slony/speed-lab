@@ -58,7 +58,18 @@ class="lazyload img-responsive img-center" />
 
 Add the ```lazyload```class and prefix and set ```data-sizes```to ```auto```
 
-**We have sometime to load images bigger than the screen it self because of the pixel ratio**
+**We sometime have to load bigger images (superior to the screen width it self) because of the device pixel ratio (DPR)**
+
+Details : If we take as example the code below on a 400x736 px smarthpone with a DPR (device pixel ratio) of 1 the image that will be loaded will be the 450x400.
+
+[![dpr-1.png](https://s22.postimg.org/acgi2z4gh/dpr_1.png)](https://postimg.org/image/sf9ku70b1/)
+
+On the same screen size (400x736) but with a DRP of 2 the image that will be loaded will be the 1200x800
+
+[![drp-2.png](https://s22.postimg.org/mfltqjfip/drp_2.png)](https://postimg.org/image/64lpu830t/)
+
+
+
 
 
 ### Lazy loading for the background images
