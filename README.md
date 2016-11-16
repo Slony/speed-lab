@@ -110,6 +110,39 @@ if($detect->isMobile()){
 ```
 
 
+
+## HTTP 2
+
+** NB : HTTP2 require https**
+
+In HTTP2 is not a best practice anymore to inline the critical css in the document. Instead use server push.
+
+How to push an asset ?
+
+```php
+<?php
+  function push_to_browser($as, $uri) {
+    header('Link: ' . $uri . '; rel=preload; as=' . $as, false);
+  }
+  $assets = array(
+    // insert here the path   here the file type
+    '<css/critical.css>' => 'style'
+  );
+  array_walk( $assets, 'push_to_browser');
+```
+
+
+How to check if the push is activated ? :
+
+[![server-push.png](https://s18.postimg.org/ho1s77zgp/server_push.png)](https://postimg.org/image/us7cjwrid/)
+
+
+
+<hr/>
+<hr/>
+
+
+
 # Result in details
 
 
