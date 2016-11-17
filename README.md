@@ -6,6 +6,8 @@ WPT Tested From: Ireland - EC2 - Chrome - Emulated Motorola G - 3GFast
 
 [![speed-lab-wpt-SI.png](https://s13.postimg.org/stbf06qh3/speed_lab_wpt_SI.png)](https://postimg.org/image/tvlliq9ab/)
 
+[![before-after.png](https://s16.postimg.org/se22nrrw5/before_after.png)](https://postimg.org/image/igr1upka9/)
+
 
 
 ## How to setup the environement
@@ -38,10 +40,14 @@ grunt sprite
 
 ## Lazy loading
 
-For lazy loading I use [lazysizes](https://github.com/aFarkas/lazysizes)
+For lazy loading I use [lazysizes](https://github.com/aFarkas/lazysizes).
+Images can saturate the bandwith with mobile connection. We can load the images (not ATF (Above the fold) images) after the onLoad event or just before the user need them (onScroll)
+
+
 
 ### Responsive images with lazy loading
 
+Important to not display downscaled images on mobile but the perfect image size for each device size. Further more the code bellow (with [lazysizes Lib](https://github.com/aFarkas/lazysizes)) allow you to use responsive images and lazy loading at the same time.
 
 ```html
 <img
@@ -136,6 +142,7 @@ How to check if the push is activated ? :
 
 [![server-push.png](https://s18.postimg.org/ho1s77zgp/server_push.png)](https://postimg.org/image/us7cjwrid/)
 
+In the example above the file ```critical.css```located in the folder ```css```is server pushed.
 
 
 <hr/>
@@ -173,3 +180,17 @@ The non-blocking behavior waterfall :
 Huge Speed-index drop !
 
 [![si-drop.png](https://s16.postimg.org/rd1bmadad/si_drop.png)](https://postimg.org/image/63dpbfwzl/)
+
+
+## SSL VS noSSL
+
+In my tests the SSL certificate add 200ms
+
+
+Above no-ssl, below with SSL
+[![Screen Shot 2016-11-17 at 10.09.52 AM.png](https://s15.postimg.org/irmtsucaj/Screen_Shot_2016_11_17_at_10_09_52_AM.png)](https://postimg.org/image/ugqtgt393/)
+
+
+Speed Index without ssl : 793
+Speed Index with ssl : 982
+[![Screen Shot 2016-11-17 at 10.12.02 AM.png](https://s14.postimg.org/pk5ybn8pt/Screen_Shot_2016_11_17_at_10_12_02_AM.png)](https://postimg.org/image/x057xfwf1/)
