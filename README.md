@@ -149,6 +149,41 @@ In the example above the file ```critical.css```located in the folder ```css```i
 <hr/>
 
 
+## How to setup modPageSpeed (Apache)
+
+
+If you’re on a 64-bit version (likely)...
+```
+wget https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_amd64.deb
+```
+If you’re on a 32-bit version (less likely)...
+```
+wget https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_i386.deb
+```
+```
+sudo dpkg -i mod-pagespeed-*.deb
+apt-get -f install
+```
+Remove the downloaded package
+```
+rm mod-pagespeed-*.deb
+```
+
+in your htaccess / virtualhost
+
+```
+<IfModule !mod_version.c>
+  LoadModule version_module /usr/lib/apache2/modules/mod_version.so
+</IfModule>
+
+<IfVersion < 2.4>
+  LoadModule pagespeed_module /usr/lib/apache2/modules/mod_pagespeed.so
+</IfVersion>
+<IfVersion >= 2.4.2>
+  LoadModule pagespeed_module /usr/lib/apache2/modules/mod_pagespeed_ap24.so
+</IfVersion>
+```
+
 
 # Result in details
 
@@ -194,3 +229,20 @@ Above no-ssl, below with SSL
 Speed Index without ssl : 793
 Speed Index with ssl : 982
 [![Screen Shot 2016-11-17 at 10.12.02 AM.png](https://s14.postimg.org/pk5ybn8pt/Screen_Shot_2016_11_17_at_10_12_02_AM.png)](https://postimg.org/image/x057xfwf1/)
+
+
+
+
+## modPageSpeed On VS OFF
+
+Tested modPagespeed on the unoptimized version of the project. As the page is built I didn't noticed a speedindex drop. MPS minified the JS / CSS and converted the images in webP format.
+
+Nothing changed in terms on "speed perception"
+[![Screen Shot 2016-11-26 at 11.45.37 AM.png](https://s12.postimg.org/8n4z7d5cd/Screen_Shot_2016_11_26_at_11_45_37_AM.png)](https://postimg.org/image/dlshlw955/)
+
+onLoad / fullyLoaded time dropped due to images compression
+[![Screen Shot 2016-11-26 at 11.49.08 AM.png](https://s13.postimg.org/n1prrin47/Screen_Shot_2016_11_26_at_11_49_08_AM.png)](https://postimg.org/image/8iimq3tz7/)
+
+
+There's our drop : images weight -40% thanks to webp
+[![Screen Shot 2016-11-26 at 11.51.24 AM.png](https://s13.postimg.org/9x4os0nyf/Screen_Shot_2016_11_26_at_11_51_24_AM.png)](https://postimg.org/image/731jekls3/)
