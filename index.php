@@ -1,6 +1,17 @@
 <?php include('header.php');?>
 
-
+<style>
+.lazyload {
+	opacity: 0;
+}
+.lazyloading {
+	opacity: 1;
+	transition: opacity 300ms;
+	background: rgba(230, 227, 228, 0.6) url(./img/rolling.svg) no-repeat center;
+	min-height: 20vh;
+    width: 100%;
+}
+</style>
 
 <body>
 
@@ -51,6 +62,8 @@
 		<p class="subtitle">Web developement good pratices </p>
 		<a href="#" id="btn-header" class="btn"> click me </a>
 	</header> -->
+
+	<div class="lazyloading" style="height:100px;width:100px"></div>
 
 
 	<div class="container">

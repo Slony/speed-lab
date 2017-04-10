@@ -127,10 +127,7 @@ if(ADAPTIVE == "true"){
   require_once 'libs/mobile_detect.php';
   $detect = new Mobile_Detect;
 }else{
-  class Mobile_detect {
-    public function isMobile(){
-    }
-  }
+  class Mobile_detect {public function isMobile(){}}
   $detect = new Mobile_Detect;
 }
 
@@ -154,3 +151,13 @@ function sanitize_output($buffer) {
 
   return $buffer;
 }
+
+
+function optiMarker($getVar){
+  $value = (isset($_GET[$getVar])) ? "true" : "false";
+  define(strtoupper($getVar),$value);
+}
+
+optiMarker('ttfb');
+
+if(TTFB)sleep(3);
