@@ -63,9 +63,6 @@
 		<a href="#" id="btn-header" class="btn"> click me </a>
 	</header> -->
 
-	<div class="lazyloading" style="height:100px;width:100px"></div>
-
-
 	<div class="container">
 
 
