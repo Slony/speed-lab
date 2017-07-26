@@ -1,5 +1,7 @@
 # speed-lab
 
+A live version is availabe here : http://speedlab.antoinebrossault.com/
+
 Fully optimized results :
 
 WPT Tested From: Ireland - EC2 - Chrome - Emulated Motorola G - 3GFast
