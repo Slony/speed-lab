@@ -158,6 +158,3 @@ function optiMarker($getVar){
   define(strtoupper($getVar),$value);
 }
 
-optiMarker('ttfb');
-
-if(TTFB)sleep(3);
