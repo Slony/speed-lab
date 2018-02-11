@@ -14,3 +14,5 @@ sass-cache/
 .DS_Store
 
 .vscode
+
+package-lock.json
