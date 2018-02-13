@@ -1,12 +1,5 @@
 module.exports = function(grunt){
-
   grunt.initConfig({
-
-    /**
-    *
-    *  Extract critical CSS
-    *
-    */
     critical: {
       test: {
         options: {
@@ -24,126 +17,64 @@ module.exports = function(grunt){
       }
     },
 
-
-    /**
-    *
-    *  Replace PATH CSS critical
-    *
-    */
     replace: {
       example: {
-        src: ['css/critical.css'],             // source files array (supports minimatch)
-        dest: 'css/critical.css',             // destination directory or file
+        src: ['css/critical.css'],
+        dest: 'css/critical.css',
         replacements: [{
-          from: '/css',                   // string replacement
+          from: '/css',
           to: 'css'
         }],
       }
     },
 
-    /**
-    *
-    * Hint les js
-    *
-    */
     jshint: {
       files: {
         src: [
           'js/parts/*.js',
           'js/parts/*/*.js',
           'js/parts/*/*/*.js',
-          // exclude ! permet d'exclure un fichier
           '!js/parts/doc_ready_end.js',
           '!js/parts/doc_ready_start.js'
         ]
       },
     },
 
-
-    /**
-    *
-    * Concatenne les js
-    *
-    */
     concat: {
       options: {
-        separator: ';', // va ajouter un ; a la fin de chaque fichier
+        separator: ';',
       },
-      fusion: {
+      all: {
+        dest: 'js/app.js',
         src: [
-
-          /**
-          *
-          *   LIBS
-          *
-          */
-
           'js/libs/loadCss.js',
           'js/libs/jquery.js',
           'js/libs/magnific-popup.js',
           'js/libs/async-gfont.js',
-
-
           'js/parts/doc_ready_start.js',
           'js/parts/helpers.js',
-
-          //'js/parts/datepicker.js',
           'js/parts/cookies_bar.js',
-
           'js/parts/misc.js',
-
-
-          /**
-          *
-          *   COMPONENTS
-          *
-          */
-
-          // Forms
           'js/parts/components/forms/form_contact.js',
-
-          // Menu
           'js/parts/components/menu.js',
-
-          // Accordion
           'js/parts/components/accordions/accordion.js',
-
-          // Plugins
-          //'js/parts/sliders.js',
-          //'js/parts/mansonry.js',
-          //'js/parts/mp-gallery.js',
-
-          // Themes
           'js/parts/header.js',
-
           'js/parts/doc_ready_end.js'
         ],
-
-        // Selectionne les js dans l'odre donné
-        dest: 'js/app.js', // crer un fichier de destination
       },
-
-
-      desktop: { // grunt concat:desktop
+      desktop: {
+        dest: 'js/app-desktop.js',
         src: [
-
           'js/libs/owl.js',
-
           'js/parts/doc_ready_start.js',
-
           'js/parts/sliders.js',
-
           'js/parts/doc_ready_end.js'
         ],
-        // Selectionne les js dans l'odre donné
-        dest: 'js/app-desktop.js', // crer un fichier de destination
       },
-
     },
 
-
-    compass: {                  // Task
-      dev: {                    // Another target
+    compass: {
+      dev: {
         options: {
           outputStyle:'compressed',
           sassDir: 'sass',
@@ -153,13 +84,6 @@ module.exports = function(grunt){
       },
     },
 
-
-    /**
-    *
-    *   Uglify
-    *
-    */
-
     uglify: {
       my_target: {
         files: {
@@ -168,13 +92,6 @@ module.exports = function(grunt){
       },
     },
 
-
-
-    /**
-    *
-    * Ecoute les modifications dans les fichiers renseigné dans l'array files
-    *
-    */
     watch: {
       scripts: {
         files: ['js/parts/*.js','js/parts/*/*.js','js/parts/*/*/*.js','css/*.css','css/*/*.css', '!css/*.min.css'],
@@ -185,9 +102,6 @@ module.exports = function(grunt){
       },
     },
 
-
-
-
     sprite:{
       all: {
         src: 'img/sprites/raw/*.png',
@@ -195,7 +109,6 @@ module.exports = function(grunt){
         destCss: 'css/sprite.css'
       },
     },
-
 
     cssmin: {
       options: {
@@ -208,8 +121,6 @@ module.exports = function(grunt){
         }
       }
     }
-
-
   });
 
   grunt.loadNpmTasks('grunt-contrib-compass');
@@ -225,5 +136,4 @@ module.exports = function(grunt){
 
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('critical-css', ['critical','replace']);
-  // créer une tache à executer, ici on execute Concat puis Uglify
 };
