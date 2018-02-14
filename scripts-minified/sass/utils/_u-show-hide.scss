@@ -1,0 +1,31 @@
+/** ======================================
+* Utils : Show / Hide
+* ======================================= */
+
+.u-hideMobile {
+  display: none !important;
+  @media (min-width: $mq-s-up ) {
+    display: block !important;
+  }
+}
+
+.u-showMobile {
+  @media (min-width: $mq-s-up ) {
+    display: none !important;
+  }
+}
+
+.u-visuallyHidden {
+  @include visually-hidden;
+}
+
+.u-hidden{
+  opacity: 0;
+  visibility: hidden;
+  transition: $trans;
+}
+
+.u-show{
+  opacity: 1;
+  visibility: visible;
+}

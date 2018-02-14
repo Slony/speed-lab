@@ -1,0 +1,70 @@
+/** ======================================
+* Base : Form
+* ======================================= */
+
+input,
+label,
+select {
+  display: block;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+}
+
+label {
+  font-weight: bold;
+  cursor: pointer;
+  abbr {
+    display: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: $spacer-s/2;
+}
+
+input[type="file"] {
+  margin-bottom: $spacer-s;
+  padding-bottom: ($spacer-s / 3);
+  width: 100%;
+}
+
+input[type="search"]{
+  box-sizing: border-box;
+}
+
+select {
+  width: auto;
+  max-width: 100%;
+}
+
+fieldset {
+  margin: 0 0 ($base-line-height / 2) 0;
+  padding: $base-line-height;
+  border: 1px solid $base-border-color;
+  background: $clr-0-lighten;
+  border-radius: $form-border-radius;
+}
+
+input::-webkit-input-placeholder {
+  color: $color-mixin-placeholder;
+}
+
+// Firefox 18
+input:-moz-placeholder {
+  color: $color-mixin-placeholder;
+}
+
+// Firefox 19+
+input::-moz-placeholder {
+  color: $color-mixin-placeholder;
+}
+
+input:-ms-input-placeholder {
+  color: $color-mixin-placeholder;
+}

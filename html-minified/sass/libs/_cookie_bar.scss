@@ -1,0 +1,43 @@
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 40px;
+  background-color: rgb(61, 142, 163);
+  color: #FFF;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  z-index: 999999;
+  font-weight: 300;
+  box-shadow: 0 5px 5px rgba(182, 182, 182, 0.35);
+  button{
+    width: 40px;
+    height: 40px;
+    background-color: #FFF;
+    border: none;
+    color: #000;
+    margin-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 1036px){
+
+  .cookie-bar {
+    position: relative;
+    padding-right: 40px;
+    line-height: normal;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    button{
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      bottom: 0px;
+      height: 100%;
+    }
+  }
+
+}

@@ -1,0 +1,25 @@
+/** ======================================
+* Utils : Text
+* ======================================= */
+
+.u-txtUpper  { text-transform: uppercase !important }
+
+.u-txtLower  { text-transform: lowercase !important }
+
+.u-txtCenter { text-align: center !important }
+
+.u-txtLeft   { text-align: left !important }
+
+.u-txtRight  { text-align: right !important }
+
+.u-txtBreak  { word-wrap: break-word !important }
+
+.u-txtNoWrap { white-space: nowrap !important }
+
+
+// http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+.u-txtKern {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}

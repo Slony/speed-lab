@@ -7,7 +7,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="css/app.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.css">
     <script type="text/javascript" src="js/libs/loadCss.js"></script>
     <script type="text/javascript" src="js/libs/jquery.js"></script>
     <script type="text/javascript" src="js/libs/magnific-popup.js"></script>
@@ -40,98 +39,13 @@
     </header>
     <div class="container">
       <div class="row u-mtm u-mbm">
+        <hr class="hr--50 u-mtm u-mbm" />
         <div class="col-sm-12 u-mts u-mbm">
           <p class="txtLead">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-        <hr class="hr--50 u-mtm u-mbm" />
-        <div class="col-sm-9">
-          <div class="opti-state ">
-            <h2> Lorem ipsum inactive </h2>
-            <h2 class="os"> Lorem ipsum active </h2>
-            <ul class="u-mbm">
-              <li>
-                <span class="error">
-                Scripts are loaded in the header :/
-                </span>
-                <a href="http://localhost/?&script=footer"> we can optimize that... </a>
-              </li>
-              <li>
-                <span class="error">
-                CSS above the fold are in an external stylesheet :(
-                <a href="http://localhost/?&css=inline"> we can optimize that... </a>
-                </span>
-              </li>
-              <li>
-                <span class="error">
-                JS files are not minified :
-                <a href="http://localhost/?&js=min"> we can optimize that... </a>
-                </span>
-              </li>
-              <li>
-                <span class="error">
-                Img are too big, they are resized in CSS :/
-                <a href="http://localhost/?&srcset"> we can optimize that... </a>
-                </span>
-              </li>
-              <li>
-                <span class="error">
-                All the images are loaded right away, we can use the lazy loading techiques to fix that.
-                <a href="http://localhost/?&lazyloading"> we can optimize that... </a>
-                </span>
-              </li>
-              <li>
-                <span class="error">
-                At the bottom of this page there's multiples images and no sprite
-                <a href="http://localhost/?&sprite"> we can optimize that... </a>
-                </span>
-              </li>
-              <li>
-                <span class="error">
-                You are loading contents for a third party server without Prefectch :(
-                <a href="http://localhost/?&dnsprefetch"> we can optimize that... </a>
-                </span>
-              </li>
-              <li>
-                <span class="error">
-                The slider used on the desktop version is hidden in CSS. The scripts, CSS, images are loaded anyway on mobile :(
-                <a href="http://localhost/?&adaptive"> we can optimize that... </a>
-                </span>
-              </li>
-              <li>
-                <span class="error">
-                A YouTube vide iFrame is loaded right-away :(
-                <a href="http://localhost/?&noiframe"> we can optimize that... </a>
-                </span>
-              </li>
-              <li>
-                <span class="error">
-                HTML output is not minified  :(
-                <a href="http://localhost/?&htmlmin"> we can optimize that... </a>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="anim-container u-mtm u-sm-mtl hidden-xs">
-            <div class="jetpack">
-              <div class="fly">
-                <div class="hombre"></div>
-                <div class="fuego"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 ws-opti-btn">
-          <a href="http://localhost/" class="hidden button u-mrs u-mls button--blockMobile"> Click here to unoptimize this page </a>
-          <a href="http://localhost/?script=footer&css=inline&js=min&srcset&lazyloading&sprite&dnsprefetch&adaptive&noiframe&htmlmin"
-            class="button button--ghost button--dblcontent u-xs-mts button--blockMobile">
-          <span class="initial">Click here to fully optimize this page</span>
-          <span class="hovered"><img src="img/sprites/raw/lightning-black.png" /></span>
-          </a>
-        </div>
+<?php include('../optimizations.php');?>
       </div>
       <hr class="hr--50 u-mtm u-mbm" />
       <h2 class="hidden-mobile">This slider is only displayed on Desktop</h2>
@@ -140,7 +54,7 @@
         <div class="item"><img src="img/home/slider/4.jpeg" alt="GTA V"></div>
         <div class="item"><img src="img/home/slider/5.jpeg" alt="Mirror Edge"></div>
       </div>
-      <hr class="hr--50 u-mtm u-mbm" />
+      <hr class="hr--50 u-mtm u-mbm hidden-mobile" />
       <section class="mini-archive">
         <div class="container">
           <div class="row">
@@ -201,41 +115,17 @@
       </section>
       <hr class="hr--50 u-mtm u-mbm" />
     </div>
-    <div class="banner-promo u-mbm u-mtm clearfix hidden">
-      <p class="txtXL">
-        mobile Performance matter
-      </p>
-    </div>
     <div class="container">
-      <img class="img-responsive img-center" src="img/1200x800.jpeg" />
-      <p>Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.</p>
-      <h2> Lorem ipsum dolor sit </h2>
-      <img class="img-responsive img-center" src="img/1200x800.jpeg" />
-      <p>Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.</p>
-      <img class="img-responsive img-center" src="img/1200x800.jpeg" />
-      <p>Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.</p>
-      <img class="img-responsive img-center" src="img/1200x800.jpeg" />
-      <p>Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.</p>
-      <img class="img-responsive img-center" src="img/1200x800.jpeg" />
-      <p>Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.</p>
-      <h2> Lorem ipsum dolor sit </h2>
-      <img class="img-responsive img-center" src="img/1200x800.jpeg" />
-      <p>Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.</p>
-      <img class="img-responsive img-center" src="img/1200x800.jpeg" />
-      <p>Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.</p>
-      <img class="img-responsive img-center" src="img/1200x800.jpeg" />
-      <p>Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.</p>
-      <img class="img-responsive img-center" src="img/1200x800.jpeg" />
-      <p>Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.</p>
-      <img class="img-responsive img-center" src="img/1200x800.jpeg" />
+      <h2>Lorem ipsum dolor sit</h2>
+      <img class="img-responsive img-center" src="img/benders.jpeg" />
       <p>Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.</p>
       <iframe class="iframe-video" src="https://www.youtube.com/embed/I4vX-twze9I" frameborder="0" allowfullscreen></iframe>
     </div>
     <footer>
       <div class="social-group">
-        <a href="#"><img src="img/sprites/raw/github.png"></i></a>
+        <a href="#"><img src="img/sprites/raw/github.png"></a>
         <a href="#"><img src="img/sprites/raw/fork.png"></a>
-        <a href="#"><img src="img/sprites/raw/plus.png"></i></a>
+        <a href="#"><img src="img/sprites/raw/plus.png"></a>
         <a href="#"><img src="img/sprites/raw/twitter.png"></a>
         <a href="#"><img src="img/sprites/raw/equals.png"></a>
       </div>

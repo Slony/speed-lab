@@ -1,0 +1,24 @@
+.button--dblcontent{
+  
+  height: 40px;
+  overflow: hidden;
+  line-height: normal;;
+  display: block;
+
+  .initial,.hovered{
+    text-align: center;
+    display: block;
+    position: relative;
+    transition: 0.3s all;
+  }
+  .initial{top : 0px;}
+
+  .hovered{bottom : -100px;
+  }
+
+  &:hover{
+    .initial{top: -100px;}
+    .hovered{bottom : 14px;}
+  }
+
+}

@@ -1,0 +1,49 @@
+.pf-details{
+  display: none;
+}
+
+.portfolio-container .pf-details{ display: block;}
+
+
+.pf-date{font-weight: bold;}
+
+
+.pf-details .button{
+  max-width: 50%;
+  i { margin-right: 10px;}
+}
+
+.portfolio-container{
+  width: 100%;
+}
+
+.portfolio-item{
+  cursor:pointer;
+  @include transition-duration(0.5s);
+  &:hover{
+    transform: scale(1.2);
+  }
+}
+
+
+.pf-details .portfolio-item{
+  cursor: default;
+  &:hover{
+    transform: none;
+  }
+}
+
+
+@media only screen and (max-width: 991px){
+
+  .pf-details h3, .pf-desc, .pf-date{text-align: center;}
+
+  .pf-details .button{max-width: 70%;}
+
+}
+
+@media only screen and (max-width: 778px){
+
+  .pf-details .button{max-width: 100%;}
+
+}

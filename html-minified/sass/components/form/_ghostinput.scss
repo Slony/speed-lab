@@ -1,0 +1,26 @@
+
+@mixin placeholder {
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+  &::-webkit-input-placeholder {@content}
+}
+
+
+
+
+.ghost{
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+  border-bottom: 2px #cfcfcf solid;
+  @include placeholder {
+    color: #474747;
+    font-style: italic;
+  }
+}
+
+.ghost-text-area{
+  border: 2px #cfcfcf solid;
+  height: 150px;
+}

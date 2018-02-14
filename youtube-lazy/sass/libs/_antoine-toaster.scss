@@ -1,0 +1,98 @@
+.antoine-toaster{
+	z-index: 99999999999;
+
+	.cache{
+		display:none;
+	}
+
+	.box {
+		width: 297px;
+		height: 250px;
+		position: fixed;
+		bottom: 0px; 
+		right: -500px;
+		background-color: #FFF;
+		padding: 10px;
+		border: 1px solid #000;
+		z-index: 2; //
+
+		.box-close{
+		  position: absolute;
+		  right: 20px;
+		  z-index: 99999999999;
+		  border: solid 1px #000;
+		  width: 21px;
+		  border-radius: 26px;
+		  text-align: center;
+		  color: #000;
+		  text-decoration: none;
+		  cursor: pointer;
+	   }
+
+	   	iframe{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		.headline-down {
+			margin-left: 0px;
+			margin-bottom: 10px;
+		}
+
+	}
+
+
+	.box-anim-enter {
+		-webkit-animation: box-anim-enter 0.5s linear;
+		animation: box-anim-enter 0.5s linear;
+		right: 0px;
+	}
+
+	@-webkit-keyframes box-anim-enter {
+
+		0%{
+		right: -500px
+		}
+		100%{
+		right: 0px;
+		}
+	}
+
+	/* FF etc.. */
+	@keyframes box-anim-enter {
+
+		0%{
+		right: -500px
+		}
+		100%{
+		right: 0px;
+		}
+	}
+
+	.box-anim-leave {
+		-webkit-animation: box-anim-leave 0.5s linear;
+		animation: box-anim-leave 0.5s linear;
+		right: -500px;
+	}
+
+	@-webkit-keyframes box-anim-leave {
+
+		0%{
+		right: 0px
+		}
+		100%{
+		right: -500px;
+		}
+	}
+
+	/* FF etc.. */
+	@keyframes box-anim-leave {
+
+		0%{
+		right: 0px
+		}
+		100%{
+		right: -500px;
+		}
+	}
+}

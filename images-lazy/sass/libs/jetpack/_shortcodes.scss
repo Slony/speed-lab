@@ -1,0 +1,46 @@
+/**
+*
+*  Shortcode slideshare
+*
+*/
+
+iframe[src^="https://www.slideshare.net/slideshow/embed_code/"] {
+  width: 600px;
+  height: 400px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px){
+
+  iframe[src^="https://www.slideshare.net/slideshow/embed_code/"] {
+    width: auto;
+    height: auto;;
+  }
+
+}
+
+/**
+*
+*  Shortcode Twitter
+*
+*/
+
+
+iframe[id^="twitter-widget"] {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+
+/**
+*
+*  Shortcode YouTube
+*
+*/
+
+iframe[src^="https://www.youtube"]{
+  max-width: 100%;
+}
