@@ -16,3 +16,9 @@ sass-cache/
 .vscode
 
 package-lock.json
+
+*/img/resized
+*/img/sprites/spritesheet.png
+*/js/app.js
+*/js/app.min.js
+*/js/owl.min.js
