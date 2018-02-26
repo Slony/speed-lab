@@ -485,13 +485,19 @@ node_modules/grunt/bin/grunt compass
 
 Для перехода на HTTPS получаем SSL-сертификат с помощью сервиса [Let’s Encrypt](https://letsencrypt.org/) и включаем HTTPS в веб-сервере Apache (подробнее читайте в статье [How to Properly Enable HTTPS on Apache with Let’s Encrypt on Ubuntu 16.04/17.10](https://www.linuxbabe.com/ubuntu/https-apache-letsencrypt-ubuntu16-04-17-10)).
 
-Добавляем источник пакетов для [certbot](https://certbot.eff.org/#ubuntuxenial-apache) и ставим необходимые пакеты:
+Ставим пакеты [Let’s Encrypt](https://letsencrypt.org/):
+
+```bash
+sudo apt-get install letsencrypt python-letsencrypt-apache
+sudo apt-get install software-properties-common
+```
+
+Добавляем источник пакетов для [certbot](https://certbot.eff.org/#ubuntuxenial-apache) и ставим его:
 
 ```bash
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
-sudo apt-get install letsencrypt python-letsencrypt-apache \
-  software-properties-common certbot python-certbot-apache
+sudo apt install certbot python-certbot-apache
 ```
 
 Запускаем certbot, чтобы он получил SSL-сертификат и настроил Apache:
