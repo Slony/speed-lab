@@ -488,8 +488,7 @@ node_modules/grunt/bin/grunt compass
 Ставим пакеты [Let’s Encrypt](https://letsencrypt.org/):
 
 ```bash
-sudo apt-get install letsencrypt python-letsencrypt-apache
-sudo apt-get install software-properties-common
+sudo apt-get install letsencrypt python-letsencrypt-apache software-properties-common
 ```
 
 Добавляем источник пакетов для [certbot](https://certbot.eff.org/#ubuntuxenial-apache) и ставим его:
