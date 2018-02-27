@@ -524,3 +524,4 @@ ___
 
 * [How to Enable HTTP/2 Protocol with Apache on Ubuntu 16.04/17.10](https://www.linuxbabe.com/ubuntu/enable-http-2-apache-ubuntu-16-04-17-10)
 * [How to Enable HTTP/2 Protocol with Nginx on Debian 8 Jessie Server](https://www.linuxbabe.com/debian/enable-http2-nginx-debian-8-jessie-server)
+* [Introducing HTTP/2 Server Push with NGINX 1.13.9](https://www.nginx.com/blog/nginx-1-13-9-http2-server-push/)
